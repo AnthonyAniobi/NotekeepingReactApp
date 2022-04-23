@@ -1,35 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/notepad.png';
+import ReorderIcon from '@mui/icons-material/Reorder';
 import { Link } from 'react-router-dom';
+import '../styles/Navbar.css';
 
 function Navbar() {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <Link to='' className="navbar-brand" >
-                    Note Keeper <img src={logo} width={34} height={34} alt="" />
-                </Link>
-                <div>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <Link to='' className="nav-link active" aria-current="page" >Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to='notes' className="nav-link" >Notes</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to='todo' className="nav-link">Todo</Link>
-                            </li>
-                        </ul>
+    const homeLink: string = '/';
+    const menuLink: string = 'menu';
+    const aboutLink: string = 'about';
+    const contactLink: string = 'contact';
 
-                    </div>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+    const [showLinks, setShowLinks] = useState(false);
+
+    function Click() {
+        setShowLinks(!showLinks);
+    }
+
+    return (
+        <div className='navbar'>
+            <div className='leftSide' id={showLinks ? 'open' : 'close'}>
+                <img src={logo} alt="" />
+                <div className="hiddenLinks">
+                    <Link to={homeLink}>Home</Link>
+                    <Link to={menuLink}>Contact</Link>
+                    <Link to={aboutLink}>Todo</Link>
+                    <Link to={contactLink}>About</Link>
                 </div>
             </div>
-        </nav>
+            <div className="rightSide">
+                <Link to={homeLink}>Home</Link>
+                <Link to={menuLink}>Contact</Link>
+                <Link to={aboutLink}>Todo</Link>
+                <Link to={contactLink}>About</Link>
+                <button onClick={Click}>
+                    <ReorderIcon />
+                </button>
+            </div>
+        </div>
     )
 }
 
