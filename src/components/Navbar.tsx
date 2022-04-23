@@ -6,9 +6,8 @@ import '../styles/Navbar.css';
 
 function Navbar() {
     const homeLink: string = '/';
-    const menuLink: string = 'menu';
-    const aboutLink: string = 'about';
-    const contactLink: string = 'contact';
+    const notesLink: string = 'notes';
+    const todoLink: string = 'todo';
 
     const [showLinks, setShowLinks] = useState(false);
 
@@ -22,16 +21,15 @@ function Navbar() {
                 <img src={logo} alt="" />
                 <div className="hiddenLinks">
                     <Link to={homeLink}>Home</Link>
-                    <Link to={menuLink}>Contact</Link>
-                    <Link to={aboutLink}>Todo</Link>
-                    <Link to={contactLink}>About</Link>
+                    <Link to={notesLink}>Notes</Link>
+                    <Link to={todoLink}>Todo</Link>
+
                 </div>
             </div>
             <div className="rightSide">
                 <Link to={homeLink}>Home</Link>
-                <Link to={menuLink}>Contact</Link>
-                <Link to={aboutLink}>Todo</Link>
-                <Link to={contactLink}>About</Link>
+                <Link to={notesLink}>Notes</Link>
+                <Link to={todoLink}>Todo</Link>
                 <button onClick={Click}>
                     <ReorderIcon />
                 </button>
