@@ -9,15 +9,15 @@ function Todo() {
 
             </div>
             <div className="rightSide">
-                <h1>Contact</h1>
+                <h1>New Notes</h1>
                 <form id='contact-form' method='POST'>
-                    <label htmlFor='name'>Full Name</label>
-                    <input name='name' type='text' placeholder='Enter your name' />
-                    <label htmlFor='email'>Full Name</label>
-                    <input name='email' type='email' placeholder='Email adress here' />
-                    <label htmlFor='message'>Full Name</label>
-                    <textarea name='message' rows={7} placeholder='enter your message'></textarea>
-                    <button type='submit'>Send Message</button>
+                    <label htmlFor='name'>Title</label>
+                    <input name='name' type='text' placeholder='Enter title of note' />
+                    <label htmlFor='email'>Short description</label>
+                    <input name='email' type='text' placeholder='Enter a short description of note' />
+                    <label htmlFor='notes'>Notes</label>
+                    <textarea name='notes' rows={7} placeholder='enter your notes'></textarea>
+                    <button type='submit'>Save note</button>
                 </form>
             </div>
         </div>
