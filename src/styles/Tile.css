@@ -46,6 +46,29 @@
     background-size: cover;
 }
 
+.overlayIcon {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.addNew {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.addNew a {
+    text-decoration: none;
+    padding: .5rem 3rem;
+    border-radius: 0.5rem;
+    background-color: #07090a;
+    color: white;
+    font-weight: bold;
+    margin: 0, 3rem;
+}
+
 .tileItem h1,
 .tileItem p {
     margin-left: 20px;

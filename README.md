@@ -13,6 +13,7 @@ This application helps to  write notes and have them persist on the device. It a
 #### libraries used
 - react-bootstrap
 - react-router-dom
+- use-sound
 
 
 

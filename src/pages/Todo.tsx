@@ -1,24 +1,46 @@
 import React from 'react'
-import modifyImage from '../assets/edit.jpg';
-import '../styles/Contact.css';
+import '../styles/Tile.css';
+import imageTile from '../assets/todo_tile.jpg';
+import TodoTile from '../components/TodoTile';
+import AlarmClock from '../components/AlarmClock';
+import { Link } from 'react-router-dom';
+
+
+const data = [
+    {
+        name: 'Find Pen',
+        image: imageTile,
+        description: 250,
+    },
+    {
+        name: 'Clean house',
+        image: imageTile,
+        description: 280,
+    },
+    {
+        name: 'Mow Lawn',
+        image: imageTile,
+        description: 350,
+    },
+]
+
 
 function Todo() {
     return (
-        <div className="contact">
-            <div className="leftSide" style={{ backgroundImage: `url(${modifyImage})` }}>
+        <div className="enumerate">
+            <h1>Our Notes</h1>
+            <div className='addNew'>
+                <Link to='/new'>Add a New Note +</Link>
 
+                <AlarmClock />
             </div>
-            <div className="rightSide">
-                <h1>New Notes</h1>
-                <form id='contact-form' method='POST'>
-                    <label htmlFor='name'>Title</label>
-                    <input name='name' type='text' placeholder='Enter title of note' />
-                    <label htmlFor='email'>Short description</label>
-                    <input name='email' type='text' placeholder='Enter a short description of note' />
-                    <label htmlFor='notes'>Notes</label>
-                    <textarea name='notes' rows={7} placeholder='enter your notes'></textarea>
-                    <button type='submit'>Save note</button>
-                </form>
+            <div className="enumerateTitle">
+
+                <div className="enumerateList">
+                    {data.map((menuItem, key) => {
+                        return (<TodoTile key={key} name={menuItem.name} description={menuItem.description} image={menuItem.image} /> as JSX.Element);
+                    })}
+                </div>
             </div>
         </div>
     )

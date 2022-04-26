@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/Tile.css';
-import imageTile from '../assets/todo_tile.jpg';
+import imageTile from '../assets/notes_tile.jpg';
 import TileItem from '../components/Tile';
-
+import { Link } from 'react-router-dom';
 
 const data = [
     {
@@ -26,6 +26,11 @@ function Notes() {
     return (
         <div className="enumerate">
             <h1>Our Notes</h1>
+            <div className='addNew'>
+                <Link to='/new'>Add a New Note +</Link>
+
+                <div></div>
+            </div>
             <div className="enumerateTitle">
 
                 <div className="enumerateList">

@@ -8,6 +8,7 @@ import ErrorPage from './pages/ErrorPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NewEntry from './pages/NewEntry';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Route path='' element={<Home />} />
                 <Route path='notes' element={<Notes />} />
                 <Route path='todo' element={<Todo />} />
+                <Route path='new' element={<NewEntry />} />
                 <Route path='*' element={<ErrorPage />} />
             </Routes>
             <Footer />
