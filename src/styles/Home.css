@@ -46,6 +46,10 @@
     font-size: 20;
 }
 
+.headerContainer.notes {
+    margin: 20;
+}
+
 .headerContainer button:hover {
     background-color: #07090a;
     cursor: pointer;

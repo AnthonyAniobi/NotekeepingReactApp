@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Tile.css';
 import imageTile from '../assets/notes_tile.jpg';
-import TileItem from '../components/Tile';
+import TileItem from '../components/NoteTile';
 import { Link } from 'react-router-dom';
 
 const data = [
