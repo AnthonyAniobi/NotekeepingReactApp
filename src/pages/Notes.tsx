@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/Tile.css';
 import imageTile from '../assets/notes_tile.jpg';
-import TileItem from '../components/NoteTile';
 import { Link } from 'react-router-dom';
+import NoteTile from '../components/NoteTile';
 
 const data = [
     {
@@ -35,7 +35,9 @@ function Notes() {
 
                 <div className="enumerateList">
                     {data.map((menuItem, key) => {
-                        return (<TileItem key={key} name={menuItem.name} description={menuItem.description} image={menuItem.image} /> as JSX.Element);
+                        return (
+
+                            <NoteTile key={key} name={menuItem.name} description={menuItem.description} image={menuItem.image} /> as JSX.Element);
                     })}
                 </div>
             </div>
