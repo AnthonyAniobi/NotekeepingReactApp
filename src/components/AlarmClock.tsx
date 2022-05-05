@@ -22,7 +22,7 @@ function AlarmClock() {
         <div style={{ display: "flex", flexDirection: 'row', alignItems: 'baseline' }}>
 
             <AccessTimeIcon />
-            <p>{currentTime}</p>
+            <p >{currentTime}</p>
         </div>
     )
 }
